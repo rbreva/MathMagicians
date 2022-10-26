@@ -1,27 +1,104 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* -------Generales---------- */
+
+:root {
+  --back: #22272e;
+  --grey: #858693;
+  --greylight: #e0e0e0;
+  --greyline: #d1d1d1;
+  --greylined: #bababa;
+  --orange: #f39148;
+  --black: #000;
+  --white: #fff;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  background: var(--back);
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  width: 100vw;
+  max-width: 56rem;
+  color: var(--black);
+  background-color: var(--greylight);
+  margin: 0 auto;
+}
+
+.calculator__result {
+  width: 100%;
+  background-color: var(--grey);
+  font-size: 3rem;
+  padding: 1rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--white);
+}
+
+.calculator__panel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.calculator__keyboard {
+  width: 100%;
+}
+
+.calculator__special {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.calculator__btn_esp,
+.calculator__btn_num {
+  background-color: var(--greylight);
+  height: 8rem;
+  border: 1px solid var(--greyline);
+  border-bottom: 1px solid var(--greylined);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.zero {
+  grid-column-start: 3;
+  grid-column-end: 1;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.calculator__numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.calculator__operators {
+  display: grid;
+}
+
+.calculator__btn_op {
+  background-color: var(--orange);
+  height: 8rem;
+  border: 1px solid var(--greyline);
+  border-bottom: 1px solid var(--greylined);
+  cursor: pointer;
+  font-size: 2rem;
 }
