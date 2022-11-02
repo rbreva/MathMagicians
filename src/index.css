@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* -------Generales---------- */
 
 :root {
@@ -29,8 +31,18 @@ body {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+p {
+  padding: 1.5rem;
+  line-height: 3rem;
 }
 
 .calculator {
@@ -39,6 +51,8 @@ body {
   color: var(--black);
   background-color: var(--greylight);
   margin: 0 auto;
+  border: 2rem solid #000;
+  border-radius: 0.5rem;
 }
 
 .calculator__result {
