@@ -1,10 +1,14 @@
-/*eslint-disable */
 import React from 'react';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import {
+  BrowserRouter,
+  NavLink,
+  Route,
+  Routes,
+} from 'react-router-dom';
+import styled from 'styled-components';
 import Home from './components/Home';
 import Calculator from './components/Calculator';
 import Quote from './components/Quote';
-import styled from 'styled-components';
 
 class App extends React.PureComponent {
   render() {
@@ -21,19 +25,24 @@ class App extends React.PureComponent {
           </Header>
           <Main>
             <Routes>
-
-              <Route path="/" element={
-                <Home />
-              } />
-
-              <Route path="/calculator" element={
-                <Calculator />
-              } />
-
-              <Route path="/quote" element={
-                <Quote />
-              } />
-
+              <Route
+                path="/"
+                element={
+                  <Home />
+                   }
+              />
+              <Route
+                path="/calculator"
+                element={
+                  <Calculator />
+              }
+              />
+              <Route
+                path="/quote"
+                element={
+                  <Quote />
+              }
+              />
             </Routes>
           </Main>
         </Container>
@@ -57,7 +66,7 @@ const Header = styled.header`
 const Title = styled.h1`
   font-size: 5rem;
   margin-bottom: 2rem;
-`
+`;
 const Menu = styled.nav`
   a {
     text-decoration: none;
@@ -72,7 +81,7 @@ const Menu = styled.nav`
   a.active {
     border-bottom: 1px solid var(--white);
   }
-`
+`;
 
 const Main = styled.main`
   background: var(--white);
