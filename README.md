@@ -10,7 +10,7 @@
 - React
 
 ## Live Demo
-[Live Demo Link](https://rbreva-math-magicians.netlify.app/) Deply in Netlify
+[Live Demo Link](https://rbreva-math-magicians.netlify.app/) Deploy in Netlify
 
 ### Prerequisites
 No prerequisite required
